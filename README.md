@@ -1,26 +1,19 @@
-# template-rust
+# recycle
 
-[![Crates.io](https://img.shields.io/crates/v/template-rust.svg?maxAge=86400)](https://crates.io/crates/template-rust)
-[![MIT / Apache 2.0 licensed](https://img.shields.io/crates/l/template-rust.svg?maxAge=2592000)](#License)
-[![Build Status](https://dev.azure.com/alecmocatta/template-rust/_apis/build/status/tests?branchName=master)](https://dev.azure.com/alecmocatta/template-rust/_build/latest?branchName=master)
+[![Crates.io](https://img.shields.io/crates/v/recycle.svg?maxAge=86400)](https://crates.io/crates/recycle)
+[![MIT / Apache 2.0 licensed](https://img.shields.io/crates/l/recycle.svg?maxAge=2592000)](#License)
+[![Build Status](https://dev.azure.com/alecmocatta/recycle/_apis/build/status/tests?branchName=master)](https://dev.azure.com/alecmocatta/recycle/_build?definitionId=11)
 
-[Docs](https://docs.rs/template-rust/0.1.0)
+[📖 Docs](https://docs.rs/recycle) | [💬 Chat](https://constellation.zulipchat.com/#narrow/stream/213236-subprojects)
 
-A template Rust library crate.
+Map Box, Vec and HashMap while recycling the backing memory if possible.
 
-This is template for Rust libraries, comprising a [`hello_world()`](https://docs.rs/template-rust/0.1.0/template_rust/fn.hello_world.html) function.
 
 ## Example
 
 ```rust
-use template_rust::hello_world;
-
-hello_world();
+...
 ```
-
-## Note
-
-Caveat emptor.
 
 ## License
 Licensed under either of

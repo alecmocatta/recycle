@@ -1,21 +1,22 @@
 [package]
-name = "template-rust"
+name = "recycle"
 version = "0.1.0"
 license = "MIT OR Apache-2.0"
-authors = ["Alec Mocatta <alec@mocatta.net>"]
+authors = ["Ozaren <krishna.sd.2012@gmail.com>", "Alec Mocatta <alec@mocatta.net>"]
 categories = []
 keywords = []
 description = """
-A template Rust library crate.
+Transform Box, Vec and HashMap while recycling the backing memory if possible.
 """
-repository = "https://github.com/alecmocatta/template-rust"
-homepage = "https://github.com/alecmocatta/template-rust"
-documentation = "https://docs.rs/template-rust/0.1.0"
+repository = "https://github.com/alecmocatta/recycle"
+homepage = "https://github.com/alecmocatta/recycle"
+documentation = "https://docs.rs/recycle/0.1.0"
 readme = "README.md"
 edition = "2018"
 
 [badges]
-azure-devops = { project = "alecmocatta/template-rust", pipeline = "tests" }
+azure-devops = { project = "alecmocatta/recycle", pipeline = "tests" }
 maintenance = { status = "passively-maintained" }
 
 [dependencies]
+replace_with = "0.1"

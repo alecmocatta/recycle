@@ -1,23 +1,18 @@
-//! A template Rust library crate.
+//! Transform Box, Vec and HashMap while recycling the backing memory if possible.
 //!
-//! **[Crates.io](https://crates.io/crates/template-rust) │ [Repo](https://github.com/alecmocatta/template-rust)**
+//! <p style="font-family: 'Fira Sans',sans-serif;padding:0.3em 0"><strong>
+//! <a href="https://crates.io/crates/recycle">📦&nbsp;&nbsp;Crates.io</a>&nbsp;&nbsp;│&nbsp;&nbsp;<a href="https://github.com/alecmocatta/recycle">📑&nbsp;&nbsp;GitHub</a>&nbsp;&nbsp;│&nbsp;&nbsp;<a href="https://constellation.zulipchat.com/#narrow/stream/213236-subprojects">💬&nbsp;&nbsp;Chat</a>
+//! </strong></p>
 //!
-//! This is template for Rust libraries, comprising a [`hello_world()`] function.
+//!
 //!
 //! # Example
 //!
+//! ```text
+//! ...
 //! ```
-//! use template_rust::hello_world;
-//!
-//! hello_world();
-//! // prints: Hello, world!
-//! ```
-//!
-//! # Note
-//!
-//! Caveat emptor.
 
-#![doc(html_root_url = "https://docs.rs/template-rust/0.1.0")]
+#![doc(html_root_url = "https://docs.rs/recycle/0.1.0")]
 #![warn(
 	missing_copy_implementations,
 	missing_debug_implementations,
@@ -28,33 +23,18 @@
 	unused_qualifications,
 	unused_results,
 	clippy::pedantic
-)] // from https://github.com/rust-unofficial/patterns/blob/master/anti_patterns/deny-warnings.md
-#![allow()]
+)]
+#![allow(clippy::module_name_repetitions, clippy::missing_errors_doc)]
 
-/// Print "Hello, world!".
-///
-/// # Example
-///
-/// ```
-/// use template_rust::hello_world;
-///
-/// hello_world();
-/// // prints: Hello, world!
-/// ```
-///
-/// # Panics
-///
-/// Will panic if printing fails.
-pub fn hello_world() {
-	print!("Hello, world!");
-}
+mod r#try;
+mod vec;
+
+pub use self::{r#try::*, vec::*};
 
 #[cfg(test)]
 mod tests {
-	use super::hello_world;
+	// use super::*;
 
 	#[test]
-	fn succeeds() {
-		hello_world();
-	}
+	fn succeeds() {}
 }
